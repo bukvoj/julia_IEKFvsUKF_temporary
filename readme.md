@@ -18,7 +18,7 @@ The performance is tested by running multiple simulations and then computing RMS
 
 ## Bearings only tracking
 The bearings only tracking model is described by
-$$
+```math
 x_{k+1} = x_k  + \omega_k \\
 y = \begin{bmatrix}
         atan(\frac{x_2-1.5}{x_1})\\
@@ -26,7 +26,7 @@ y = \begin{bmatrix}
     \end{bmatrix} + \nu_k \\
 \omega_k \approx \mathcal{N}(0, Q) \\
 \nu_k \approx \mathcal{N}(0, R)
-$$
+```
 
 ### Results:
 Performance:  \
@@ -49,12 +49,12 @@ Computational load: \
 
 ## Univariate non-stationary growth model (UNGM)
 Model:
-$$
+```math
 x_{k+1} = 0.5x_k +25\frac{x_k}{1+x_k^2} + 8 \cos(1.2 k) + \omega_k \\
 y = \frac{x^2}{20} + \nu_k \\
 \omega_k \approx \mathcal{N}(0, Q) \\
 \nu_k \approx \mathcal{N}(0, R)
-$$
+```
 Performance: \
 When dynamics are nonlinear, UKF is more robust to process noise and perform generally better than IEKF unless the noise covariances are small. When process noise is low, UKF is outperformed by IEKF. Computationally IEKF is comparable to UKF. I believe it could further be optimized.
 
