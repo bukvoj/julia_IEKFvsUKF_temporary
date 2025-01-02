@@ -35,16 +35,16 @@ With linear dynamics and non-linear measurement, IEKF performs much better than 
 
 Q = 0.1 * I
 R = 1e-4 * I \
-![](bot_benchmark_lownoise.png) \
+![bot_benchmark_lownoise](figs/bot_benchmark_lownoise.png) \
 \
 \
 Q = 1 * I
 R = 1e-4 * I \
-![](bot_benchmark_highnoise.png)
+![bot_benchmark_highnoise](figs/bot_benchmark_highnoise.png)
 
 
 Computational load: \
-![alt text](bot_computational.png)
+![bot benchmark time](figs/bot_computational.png)
 
 
 ## Univariate non-stationary growth model (UNGM)
@@ -60,15 +60,15 @@ When dynamics are nonlinear, UKF is more robust to process noise and perform gen
 
 
 Q = 0.01, R=0.1\
-![alt text](ugm_benchmark_lownoise.png) \
+![ugm_benchmark_lownoise](figs/ugm_benchmark_lownoise.png) \
 \
 \
 Q = 0.1, R=0.1\
-![alt text](ugm_benchmark_highnoise.png)
+![ugm_benchmark_highnoise](figs/ugm_benchmark_highnoise.png)
 
 
 
 
 
 Computational load:
-![alt text](ugm_computational.png)
+![ugm benchmark time](figs/ugm_computational.png)
