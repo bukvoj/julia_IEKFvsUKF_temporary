@@ -1,11 +1,6 @@
 # IEKF vs UKF
 This is a temporary repo to compare IEKF and UKF.
 
-## TLDR 
-When dynamics are linear, use IEKF.
-              When dynamics are nonlinear use UKF. \
-               UKF is more robust in prediction step, IEKF is more accurate in correction step of the filter. \
-              IEKF correction step is 2 times slower than UKF correction step. (It needs to be optimized.)
 
 ## Test models
 The filters will be tested on examples from article at:
@@ -60,7 +55,7 @@ y &= \frac{x^2}{20} + \nu_k \newline
 \end{align}
 ```
 Performance: \
-When dynamics are nonlinear, UKF is more robust to process noise and perform generally better than IEKF unless the noise covariances are small. When process noise is low, UKF is outperformed by IEKF. Computationally IEKF is comparable to UKF. I believe it could further be optimized.
+In the example, when dynamics are nonlinear, UKF is more robust to process noise and perform generally better than IEKF unless the noise covariances are small. When process noise is low, UKF is outperformed by IEKF. Computationally IEKF is comparable to UKF.
 
 
 Q = 0.01, R=0.1\
@@ -75,4 +70,4 @@ Q = 0.1, R=0.1\
 
 
 Computational load:
-![ugm benchmark time](figs/ugm_computational.png)
+![ugm benchmark time](figs/ugm_computational.png)![alt text](image.png)
